@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>文組小廢柴的 Vibe Coding 之路</title>
     <style>
-        /* 愛馬仕風格配色定義 */
+        /* 愛馬仕風格配色定義 - 經典白底綠字版 */
         :root {
-            --hermes-orange: #F37021;
-            --hermes-dark: #282828; /* 接近黑色的深灰，像皮革 */
-            --hermes-cream: #FDFBF7; /* 米白紙張質感 */
-            --text-color: #4A4A4A;
+            --hermes-orange: #F37021; /* 經典橘 */
+            --hermes-green: #00483C;  /* 柏樹綠 (Vert Cyprès) - 像深色墨水 */
+            --hermes-cream: #FDFBF7;  /* 米白紙張 */
+            --hermes-sand: #EFECE6;   /* 外部背景沙色 */
         }
 
         body {
-            background-color: #EFECE6; /* 淺灰背景，襯托卡片 */
+            background-color: var(--hermes-sand);
             font-family: "Helvetica Neue", Arial, "PingFang TC", "Heiti TC", "Microsoft JhengHei", sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
             margin: 0;
-            color: var(--text-color);
+            color: var(--hermes-green); /* 全域文字預設為深綠色 */
         }
 
         /* 名片卡片主體 */
@@ -30,15 +30,15 @@
             width: 90%;
             max-width: 500px;
             padding: 40px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); /* 柔和的陰影 */
-            border-top: 8px solid var(--hermes-orange); /* 經典橘色邊條 */
+            box-shadow: 0 15px 35px rgba(0, 72, 60, 0.1); /* 陰影帶一點點綠色調 */
+            border-top: 8px solid var(--hermes-orange);
             border-radius: 4px;
             position: relative;
         }
 
         /* 標題區 */
         h1 {
-            color: var(--hermes-dark);
+            color: var(--hermes-green);
             font-size: 1.5rem;
             margin-bottom: 10px;
             letter-spacing: 1px;
@@ -68,12 +68,16 @@
             line-height: 1.8;
             font-size: 0.95rem;
             margin-bottom: 15px;
-            text-align: justify; /* 左右對齊，增加整齊感 */
+            text-align: justify;
+            color: var(--hermes-green); /* 確保內文也是深綠色 */
         }
 
+        /* 強調文字 - 這裡可以用橘色來跳脫綠色 */
         .highlight {
             font-weight: bold;
-            color: var(--hermes-dark);
+            color: var(--hermes-orange);
+            background-color: rgba(243, 112, 33, 0.1); /* 淡淡的橘色螢光筆效果 */
+            padding: 0 4px;
         }
 
         /* 底部連結區 */
@@ -81,16 +85,16 @@
             margin-top: 40px;
             text-align: center;
             font-size: 0.85rem;
-            color: #888;
+            opacity: 0.7; /* 讓底部的綠色淡一點 */
         }
 
-        /* 如果你想放連結按鈕 */
+        /* 按鈕 */
         .btn {
             display: inline-block;
             margin-top: 10px;
             padding: 10px 20px;
-            border: 1px solid var(--hermes-orange);
-            color: var(--hermes-orange);
+            border: 1px solid var(--hermes-green); /* 綠色框 */
+            color: var(--hermes-green);
             text-decoration: none;
             border-radius: 2px;
             transition: all 0.3s ease;
@@ -98,8 +102,9 @@
         }
 
         .btn:hover {
-            background-color: var(--hermes-orange);
+            background-color: var(--hermes-green);
             color: white;
+            border-color: var(--hermes-green);
         }
 
     </style>
@@ -126,7 +131,7 @@
 
         <hr>
 
-        <p style="font-size: 0.85rem; color: #666;">
+        <p style="font-size: 0.85rem; opacity: 0.8;">
             這裡將存放我的 Side Project。作為一個無背景的小白，作品必有許多不足之處，還請各方大神輕拍指教，感激不盡。
         </p>
 
